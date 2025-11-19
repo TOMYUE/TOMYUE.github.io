@@ -15,14 +15,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false # disabled - no news items
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false # disabled - no blog posts
 ---
 
 Hi, I’m YUE TANG, a one-year PhD student at DASE & SOLE, advised by Prof.Huang Bo. My research interests lie in the Binary Translation and Compilation Optimizations.
