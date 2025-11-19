@@ -25,6 +25,4 @@ Hi, I’m YUE TANG, a one-year PhD student at DASE & SOLE, advised by Prof.Huang
 
 
 ##### publications
-- **AOBO: A Fast-Switching Online Binary Optimizer on AArch64** Mu, Wenlong; ***Tang, Yue***; Huang, Bo; and Guo, Jianmei. 
-  
-  *ACM Trans. Archit. Code Optim.* (TACO), Vol. 22, No. 2, Article 82 (June 2025).
+- **AOBO: A Fast-Switching Online Binary Optimizer on AArch64**. Mu, Wenlong; ***Tang, Yue***; Huang, Bo; and Guo, Jianmei. *ACM Trans. Archit. Code Optim.* (TACO), Vol. 22, No. 2, Article 82 (June 2025).
