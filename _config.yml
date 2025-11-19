@@ -92,8 +92,13 @@ permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
 # Pagination
+# Note: GitHub Pages only supports jekyll-paginate v1, not v2
+# v2 syntax (enabled: true) is not supported
+# If you need pagination, use v1 syntax:
+# paginate: 5
+# paginate_path: "/blog/page:num/"
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
   enabled: true
@@ -196,26 +201,11 @@ keep_files:
   - .nojekyll
 
 # Plug-ins
-# Note: GitHub Pages only supports a limited set of plugins.
-# Unsupported plugins are commented out below.
-plugins:
-  # - jekyll-archives-v2  # Not supported by GitHub Pages
-  # - jekyll-email-protect  # Not supported by GitHub Pages
-  - jekyll-feed  # Supported by GitHub Pages
-  # - jekyll-get-json  # Not supported by GitHub Pages
-  # - jekyll-imagemagick  # Not supported by GitHub Pages
-  # - jekyll-jupyter-notebook  # Not supported by GitHub Pages
-  # - jekyll-link-attributes  # Not supported by GitHub Pages
-  # - jekyll-minifier  # Not supported by GitHub Pages
-  # - jekyll-paginate-v2  # Not supported by GitHub Pages
-  # - jekyll-regex-replace  # Not supported by GitHub Pages
-  # - jekyll/scholar  # Not supported by GitHub Pages
-  - jekyll-sitemap  # Supported by GitHub Pages
-  # - jekyll-tabs  # Not supported by GitHub Pages
-  # - jekyll-terser  # Not supported by GitHub Pages
-  # - jekyll-toc  # Not supported by GitHub Pages
-  # - jekyll-twitter-plugin  # Not supported by GitHub Pages
-  - jemoji  # Supported by GitHub Pages
+# Note: When using the 'github-pages' gem in Gemfile, all supported plugins
+# are automatically included. Do not list them here to avoid conflicts.
+# GitHub Pages will automatically use: jekyll-feed, jekyll-sitemap, jemoji, etc.
+# For full list, see: https://pages.github.com/versions/
+plugins: []
 
 # Sitemap settings
 defaults:
@@ -231,31 +221,35 @@ sass:
 # Jekyll Minifier
 # -----------------------------------------------------------------------------
 
-jekyll-minifier:
-  compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+# Jekyll Minifier - NOT supported by GitHub Pages
+# jekyll-minifier:
+#   compress_javascript: false
+#   exclude: ["robots.txt", "assets/js/search/*.js"]
 
 # -----------------------------------------------------------------------------
 # Terser
 # -----------------------------------------------------------------------------
 
-terser:
-  compress:
-    drop_console: true
+# Terser - NOT supported by GitHub Pages
+# terser:
+#   compress:
+#     drop_console: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
 # -----------------------------------------------------------------------------
 
-jekyll-archives:
-  posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-    permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+# Jekyll Archives - NOT supported by GitHub Pages
+# Commenting out to avoid build errors
+# jekyll-archives:
+#   posts:
+#     enabled: [year, tags, categories]
+#     permalinks:
+#       year: "/blog/:year/"
+#       tags: "/blog/:type/:name/"
+#       categories: "/blog/:type/:name/"
+#   books:
+#     enabled: [year, tags, categories]
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
@@ -348,8 +342,10 @@ external_links:
 
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
+# ImageMagick plugin - NOT supported by GitHub Pages
+# If you need responsive images, you'll need to generate them locally
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # disabled for GitHub Pages compatibility
   widths:
     - 480
     - 800
