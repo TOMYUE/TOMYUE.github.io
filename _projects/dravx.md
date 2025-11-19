@@ -6,5 +6,5 @@ img:
 importance: 1
 category: work
 redirect: /dravx/
+related_publications: false
 ---
-
